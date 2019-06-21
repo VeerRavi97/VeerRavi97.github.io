@@ -36,6 +36,21 @@ $(document).ready(function() {
 	
       
   });
+  $(document).ready(function() {
+
+	$(".progress-element").waypoint(function(){
+		var progressBar = $(".progress-bar2");
+      progressBar.each(function(){
+          $(this).animate({width: $(this).attr("aria-valuenow") + "%"},2000)
+      });
+  
+		this.destroy();
+	},{
+		offset:'bottom-in-view'
+	});
+	
+      
+  });
 	
 
 $(document).ready(function() {
